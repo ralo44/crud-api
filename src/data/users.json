@@ -1,0 +1,38 @@
+[
+    {
+        "id": "e2fec764-7a7b-46d6-96d6-de9d3aaee12",
+        "username": "Omar Rangel",
+        "age": 21,
+        "hobbies": [
+            "swim",
+            "read"
+        ]
+    },
+    {
+        "id": "e2fec764-7a7b-46d6-96d6-fdswe23",
+        "username": "Jorge Falcon",
+        "age": 31,
+        "hobbies": [
+            "walk",
+            "eat"
+        ]
+    },
+    {
+        "id": "e2fec764-7a7b-46d6-96d6-de9d3de23de",
+        "username": "Padre Ramon",
+        "age": 51,
+        "hobbies": [
+            "sleep",
+            "sing"
+        ]
+    },
+    {
+        "id": "e2fec764-7a7b-46d6-96d6-de9d396d6",
+        "username": "Jose Paredes",
+        "age": 41,
+        "hobbies": [
+            "run",
+            "read"
+        ]
+    }
+]

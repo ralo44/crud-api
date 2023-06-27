@@ -1,0 +1,23 @@
+{
+  "name": "crud-api",
+  "version": "1.0.0",
+  "description": "Basic Crud Api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ralo44/crud-api.git"
+  },
+  "author": "ralo44",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ralo44/crud-api/issues"
+  },
+  "homepage": "https://github.com/ralo44/crud-api#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
