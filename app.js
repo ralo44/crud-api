@@ -1,12 +1,29 @@
 const http = require("http");
-const PORT = 3000;
+require("dotenv").config();
+
+const getMethod = require("./src/crud/get.js");
+let users = require("./src/data/users.json");
+
+const PORT = process.env.PORT;
 
 const server = http.createServer((request, response) => {
-    
-    response.end();
+    request.users = users;
+
+    switch (request.method) {
+        case "GET":
+            getMethod(request, response);
+            break;
+        default:
+            response.statusCode = 500;
+            response.setHeader("Content-Type", "application/json");
+            response.write(
+                JSON.stringify({ title: "Not Found", message: "Request not found" })
+            );
+            response.end();
+    }
 });
 
-server.listen(PORT, ()=> {
+server.listen(PORT, () => {
     console.log(`Server at port: ${PORT} `);
 })
 
