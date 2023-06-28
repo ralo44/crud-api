@@ -4,6 +4,7 @@ require("dotenv").config();
 const getMethod = require("./src/crud/get.js");
 const postMethod = require("./src/crud/post.js");
 const deleteMethod = require("./src/crud/delete.js");
+const putMethod = require("./src/crud/update.js");
 let users = require("./src/data/users.json");
 
 const PORT = process.env.PORT;
@@ -17,6 +18,9 @@ const server = http.createServer((request, response) => {
             break;
         case "POST":
             postMethod(request, response);
+            break;
+        case "PUT":
+            putMethod(request, response);
             break;
         case "DELETE":
             deleteMethod(request, response);
