@@ -1,8 +1,18 @@
 module.exports = (request, response) => {
+    let id = request.url.split('/')[3];
+
     if (request.url === "/api/users") {
         response.statusCode = 200;
         response.setHeader("Content-Type", "application/json");
         response.write(JSON.stringify(request.users));
+        response.end();
+    } else if (request.url === `/api/users/${id}`) {
+        response.statusCode = 200;
+        response.setHeader("Content-Type", "application/json");
+        idUser = request.users.filter((user) => {
+            return user.id === id
+        });
+        response.write(JSON.stringify(idUser));
         response.end();
     } else {
         response.writeHead(404, { "Content-Type": "application/json" });

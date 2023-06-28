@@ -2,6 +2,8 @@ const http = require("http");
 require("dotenv").config();
 
 const getMethod = require("./src/crud/get.js");
+const postMethod = require("./src/crud/post.js");
+const deleteMethod = require("./src/crud/delete.js");
 let users = require("./src/data/users.json");
 
 const PORT = process.env.PORT;
@@ -12,6 +14,12 @@ const server = http.createServer((request, response) => {
     switch (request.method) {
         case "GET":
             getMethod(request, response);
+            break;
+        case "POST":
+            postMethod(request, response);
+            break;
+        case "DELETE":
+            deleteMethod(request, response);
             break;
         default:
             response.statusCode = 500;
