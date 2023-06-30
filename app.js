@@ -9,7 +9,7 @@ let users = require("./src/data/users.json");
 
 const PORT = process.env.PORT;
 
-const server = http.createServer((request, response) => {
+const app = http.createServer((request, response) => {
     request.users = users;
 
     switch (request.method) {
@@ -35,7 +35,7 @@ const server = http.createServer((request, response) => {
     }
 });
 
-server.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log(`Server at port: ${PORT} `);
-})
-
+});
+module.exports = app;

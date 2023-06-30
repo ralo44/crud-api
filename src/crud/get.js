@@ -13,10 +13,10 @@ module.exports = (request, response) => {
         if (idUser !== -1) {
             response.statusCode = 200;
             response.setHeader("Content-Type", "application/json");
-            idUser = request.users.filter((user) => {
+            userFilter = request.users.filter((user) => {
                 return user.id === id
             });
-            response.write(JSON.stringify(idUser));
+            response.write(JSON.stringify(userFilter));
             response.end();
         } else {
             response.writeHead(400, { "Content-Type": "application/json" });

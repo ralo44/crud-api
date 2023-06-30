@@ -4,7 +4,7 @@
   "description": "Basic Crud Api",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest ",
     "start:dev": "nodemon app.js",
     "build": "webpack",
     "start:prod": "npm run build & nodemon dist/app.js"
@@ -23,12 +23,15 @@
     "@babel/core": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
     "babel-loader": "^9.1.2",
+    "jest": "^29.5.0",
     "nodemon": "^2.0.22",
+    "supertest": "^6.3.3",
     "webpack": "^5.88.0",
     "webpack-cli": "^5.1.4",
     "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "save-dev": "0.0.1-security"
   }
 }
